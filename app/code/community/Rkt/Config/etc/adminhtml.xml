@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rkt_Config extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Rkt
+ * @package        Rkt_Config
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <rkt_config translate="title" module="rkt_config">
+                                        <title>Config</title>
+                                    </rkt_config>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <rkt_config translate="title" module="rkt_config">
+                        <title>Config Files</title>
+                        <children>
+                            <config translate="title" module="rkt_config">
+                                <title>Config</title>
+                                <sort_order>0</sort_order>
+                            </config>
+                        </children>
+                    </rkt_config>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <rkt_config translate="title" module="rkt_config">
+            <title>Config Files</title>
+            <sort_order>85</sort_order>
+            <children>
+                <config translate="title" module="rkt_config">
+                    <title>Config</title>
+                    <action>adminhtml/config_config</action>
+                    <sort_order>0</sort_order>
+                </config>
+            </children>
+        </rkt_config>
+    </menu>
+</config>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rkt_CustomerSupport extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is a part of a paid extension. You cannot sell the code base without acknowledging the developer team of this extension. You are free to edit the code base once you have purchased this extension. 
+ * 
+ * For more details, have look into the reference url provided with this file.
+ * 
+ * @category       Rkt
+ * @package        Rkt_CustomerSupport
+ * @copyright      Copyright (c) 2015
+ * @license        http://www.rktinaction.com/support
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <rkt_customersupport translate="title" module="rkt_customersupport">
+                                        <title>CustomerSupport</title>
+                                    </rkt_customersupport>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <customer>
+                        <children>
+                            <rkt_customersupport translate="title" module="rkt_customersupport">
+                                <title>Customer Support</title>
+                                <children>
+                                    <productenquiry translate="title" module="rkt_customersupport">
+                                        <title>Product Enquiry</title>
+                                        <sort_order>0</sort_order>
+                                    </productenquiry>
+                                </children>
+                            </rkt_customersupport>                        </children>
+                    </customer>
+
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <customer>
+            <children>
+                <rkt_customersupport translate="title" module="rkt_customersupport">
+                    <title>Customer Support</title>
+                    <sort_order>55</sort_order>
+                    <children>
+                        <productenquiry translate="title" module="rkt_customersupport">
+                            <title>Product Enquiry</title>
+                            <action>adminhtml/customersupport_productenquiry</action>
+                            <sort_order>0</sort_order>
+                        </productenquiry>
+                    </children>
+                </rkt_customersupport>            </children>
+        </customer>
+
+    </menu>
+</config>

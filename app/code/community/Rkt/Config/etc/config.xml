@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rkt_Config extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Rkt
+ * @package        Rkt_Config
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Rkt_Config>
+            <version>1.0.0</version>
+        </Rkt_Config>
+    </modules>
+    <global>
+        <resources>
+            <rkt_config_setup>
+                <setup>
+                    <module>Rkt_Config</module>
+                    <class>Rkt_Config_Model_Resource_Setup</class>
+                </setup>
+            </rkt_config_setup>
+        </resources>
+        <blocks>
+            <rkt_config>
+                <class>Rkt_Config_Block</class>
+            </rkt_config>
+        </blocks>
+        <helpers>
+            <rkt_config>
+                <class>Rkt_Config_Helper</class>
+            </rkt_config>
+        </helpers>
+        <models>
+            <rkt_config>
+                <class>Rkt_Config_Model</class>
+                <resourceModel>rkt_config_resource</resourceModel>
+            </rkt_config>
+            <rkt_config_resource>
+                <class>Rkt_Config_Model_Resource</class>
+                <entities>
+                    <config>
+                        <table>rkt_config_files</table>
+                    </config>
+                </entities>
+            </rkt_config_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <rkt_config>
+                    <file>rkt_config.xml</file>
+                </rkt_config>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Rkt_Config>
+                    <files>
+                        <default>Rkt_Config.csv</default>
+                    </files>
+                </Rkt_Config>
+            </modules>
+        </translate>
+        <global_search>
+            <config>
+                <class>rkt_config/adminhtml_search_config</class>
+                <acl>rkt_config</acl>
+            </config>
+        </global_search>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Rkt_Config before="Mage_Adminhtml">Rkt_Config_Adminhtml</Rkt_Config>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

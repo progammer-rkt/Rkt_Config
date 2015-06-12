@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rkt_CustomerSupport extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is a part of a paid extension. You cannot sell the code base without acknowledging the developer team of this extension. You are free to edit the code base once you have purchased this extension. 
+ * 
+ * For more details, have look into the reference url provided with this file.
+ * 
+ * @category       Rkt
+ * @package        Rkt_CustomerSupport
+ * @copyright      Copyright (c) 2015
+ * @license        http://www.rktinaction.com/support
+ */
+-->
+<config>
+    <modules>
+        <Rkt_CustomerSupport>
+            <version>1.0.0</version>
+        </Rkt_CustomerSupport>
+    </modules>
+    <global>
+        <resources>
+            <rkt_customersupport_setup>
+                <setup>
+                    <module>Rkt_CustomerSupport</module>
+                    <class>Rkt_CustomerSupport_Model_Resource_Setup</class>
+                </setup>
+            </rkt_customersupport_setup>
+        </resources>
+        <blocks>
+            <rkt_customersupport>
+                <class>Rkt_CustomerSupport_Block</class>
+            </rkt_customersupport>
+        </blocks>
+        <helpers>
+            <rkt_customersupport>
+                <class>Rkt_CustomerSupport_Helper</class>
+            </rkt_customersupport>
+        </helpers>
+        <models>
+            <rkt_customersupport>
+                <class>Rkt_CustomerSupport_Model</class>
+                <resourceModel>rkt_customersupport_resource</resourceModel>
+            </rkt_customersupport>
+            <rkt_customersupport_resource>
+                <class>Rkt_CustomerSupport_Model_Resource</class>
+                <entities>
+                    <productenquiry>
+                        <table>rkt_customersupport_productenquiry</table>
+                    </productenquiry>
+                    <productenquiry_store>
+                        <table>rkt_customersupport_productenquiry_store</table>
+                    </productenquiry_store>
+                </entities>
+            </rkt_customersupport_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <rkt_customersupport>
+                    <file>rkt_customersupport.xml</file>
+                </rkt_customersupport>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Rkt_CustomerSupport>
+                    <files>
+                        <default>Rkt_CustomerSupport.csv</default>
+                    </files>
+                </Rkt_CustomerSupport>
+            </modules>
+        </translate>
+        <global_search>
+            <productenquiry>
+                <class>rkt_customersupport/adminhtml_search_productenquiry</class>
+                <acl>rkt_customersupport</acl>
+            </productenquiry>
+        </global_search>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Rkt_CustomerSupport before="Mage_Adminhtml">Rkt_CustomerSupport_Adminhtml</Rkt_CustomerSupport>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <rkt_customersupport>
+                <use>standard</use>
+                <args>
+                    <module>Rkt_CustomerSupport</module>
+                    <frontName>rkt_customersupport</frontName>
+                </args>
+            </rkt_customersupport>
+        </routers>
+        <layout>
+            <updates>
+                <rkt_customersupport>
+                    <file>rkt_customersupport.xml</file>
+                </rkt_customersupport>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Rkt_CustomerSupport>
+                    <files>
+                        <default>Rkt_CustomerSupport.csv</default>
+                    </files>
+                </Rkt_CustomerSupport>
+            </modules>
+        </translate>
+    </frontend>
+    <default>
+        <rkt_customersupport>
+            <productenquiry>
+                <breadcrumbs>1</breadcrumbs>
+                <rss>1</rss>
+            </productenquiry>
+        </rkt_customersupport>
+    </default>
+</config>

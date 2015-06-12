@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rkt_Config extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Rkt
+ * @package        Rkt_Config
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<layout>
+    <adminhtml_config_config_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>rkt_config/config</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="rkt_config/adminhtml_config" name="config" />
+
+        </reference>
+    </adminhtml_config_config_index>
+    <adminhtml_config_config_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="rkt_config/adminhtml_config_grid" name="config_grid"/>
+        </block>
+    </adminhtml_config_config_grid>
+    <!-- Config add/edit action -->
+    <adminhtml_config_config_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>rkt_config/config</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="rkt_config/adminhtml_config_edit" name="config_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="rkt_config/adminhtml_config_edit_tabs" name="config_tabs"></block>
+        </reference>
+    </adminhtml_config_config_edit>
+</layout>
