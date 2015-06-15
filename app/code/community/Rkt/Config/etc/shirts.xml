@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config>
+	<custom_category_config>
+		<product_options>
+			<test_attribute_1>
+				<type>text</type>
+				<value>some value 1</value>
+			</test_attribute_1>
+		</product_options>
+	</custom_category_config>
+</config>

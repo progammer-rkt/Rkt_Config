@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config>
+	<default>
+		<category_config_files>
+			<files>
+				<item1>
+					<category_id>1</category_id>
+					<file>shoes.xml</file>
+				</item1>
+				<item2>
+					<category_id>2</category_id>
+					<file>pants.xml</file>
+				</item2>
+				<item3>
+					<category_id>3</category_id>
+					<file>shirts.xml</file>
+				</item3>
+			</files>
+		</category_config_files>
+	</default>
+</config>

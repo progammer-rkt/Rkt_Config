@@ -91,4 +91,20 @@
             </adminhtml>
         </routers>
     </admin>
+    <frontend>
+        <routers>
+            <rkt_config>
+                <use>standard</use>
+                <args>
+                    <module>Rkt_Config</module>
+                    <frontName>configtest</frontName>
+                </args>
+            </rkt_config>
+    </routers>
+    </frontend>
+    <default>
+        <custom_config_container_xml>
+            <file>config_files.xml</file>
+        </custom_config_container_xml>
+    </default>
 </config>
